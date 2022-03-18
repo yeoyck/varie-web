@@ -1,0 +1,54 @@
+@import './components/list';
+
+// .page-enter-active,
+// .page-leave-active {
+//   transition-duration: 0.5s;
+//   transition-property: height, opacity, transform;
+//   transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+//   overflow: hidden;
+// }
+// .page-enter {
+//   opacity: 0;
+//   transform: translate(2em, 0);
+// }
+// .page-leave-to {
+//   opacity: 0;
+//   transform: translate(-2em, 0);
+// }
+
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.5s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition-duration: 0.5s;
+  transition-property: height, opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
+}
+.slide-left-enter {
+  opacity: 0;
+  transform: translate(2em, 0);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translate(-2em, 0);
+}
+
+// Page
+.page {
+  &.card {
+    margin: 0;
+  }
+  &.page-full {
+    flex: 1 1 auto;
+  }
+}

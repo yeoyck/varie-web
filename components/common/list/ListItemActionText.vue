@@ -1,0 +1,9 @@
+<template>
+  <div class="a-list-item-action-text">
+    <slot></slot>
+  </div>
+</template>
+
+<script setup lang="ts"></script>
+
+<style lang="scss" scoped></style>

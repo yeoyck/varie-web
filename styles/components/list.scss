@@ -1,0 +1,116 @@
+// List Styles
+.a-list {
+  display: block;
+  padding: 8px 0;
+  position: static;
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 14%), 0 0 0 0 rgb(0 0 0 / 12%);
+  background: #fff;
+  color: var(--text-color);
+  &.a-list--subheader {
+    padding-top: 0px;
+  }
+  &.a-list--dense {
+    .a-list-item {
+      min-height: 40px;
+    }
+    .a-list-item-content {
+      padding: 8px 0;
+    }
+
+    .a-list-item-title {
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .a-list-item-subtitle {
+      line-height: 1;
+    }
+  }
+}
+.a-list-item {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  letter-spacing: normal;
+  min-height: 48px;
+  outline: none;
+  padding: 0 16px;
+  position: relative;
+  text-decoration: none;
+  &.a-list-item--link {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:hover {
+      background-color: var(--surface-hover);
+    }
+  }
+  &.a-list-item--disabled {
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.38);
+  }
+
+  .a-list-item-action:first-child {
+    margin-right: 18px;
+  }
+  .a-list-item-action:last-of-type:not(:only-child) {
+    margin-left: 16px;
+  }
+}
+
+.a-list-item-content {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1;
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+.a-list-item-title {
+  flex: 1 1 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-self: center;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.a-list-item-subtitle {
+  flex: 1 1 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.a-list-item-action {
+  display: inline-flex;
+  min-width: 24px;
+  align-self: center;
+  margin: 12px 0;
+
+  &.a-list-item-action--stack {
+    align-items: flex-end;
+    align-self: stretch;
+    justify-content: space-between;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+
+  i {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .a-list-item-action-text {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.75em;
+  }
+}

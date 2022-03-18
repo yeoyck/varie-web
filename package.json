@@ -1,0 +1,60 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "upgrade:nuxt": "nuxi upgrade",
+    "build:staging": "cross-env BUILD_PROFILE=staging nuxi build",
+    "start": "cross-env node .output/server/index.mjs",
+    "start:staging": "cross-env BUILD_PROFILE=staging node .output/server/index.mjs",
+    "prepare": "husky install",
+    "typecheck": "nuxi typecheck",
+    "lint:js": "eslint --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check .",
+    "lint": "pnpm lint:js && pnpm lint:style && pnpm lint:prettier",
+    "lintfix": "prettier --write --list-different . && pnpm lint:js --fix && pnpm lint:style --fix"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --cache",
+    "*.{css,scss,sass,html,vue}": "stylelint",
+    "*.**": "prettier --check --ignore-unknown"
+  },
+  "dependencies": {
+    "@vuelidate/core": "2.0.0-alpha.34",
+    "@vuelidate/validators": "^2.0.0-alpha.27",
+    "axios": "^0.26.1",
+    "date-fns": "^2.28.0",
+    "klona": "^2.0.5",
+    "pinia": "^2.0.12",
+    "primeflex": "^3.1.3",
+    "primeicons": "^5.0.0",
+    "primevue": "^3.12.2",
+    "urijs": "^1.19.10"
+  },
+  "devDependencies": {
+    "@iconify-json/flat-color-icons": "^1.1.1",
+    "@iconify-json/uim": "^1.1.1",
+    "@pinia/nuxt": "^0.1.8",
+    "@types/urijs": "^1.19.19",
+    "@unocss/nuxt": "^0.29.3",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "@vueuse/nuxt": "^8.1.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.11.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "nuxt3": "3.0.0-27459267.f69126e",
+    "postcss-html": "^1.3.0",
+    "prettier": "^2.6.0",
+    "sass": "^1.49.9",
+    "stylelint": "^14.6.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.3.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "typescript": "^4.6.2",
+    "vue-tsc": "^0.33.2"
+  }
+}

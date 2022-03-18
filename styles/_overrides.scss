@@ -1,0 +1,31 @@
+// Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
+.layout-topbar {
+  .layout-menu-button {
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+  .layout-topbar-logo {
+    &:focus {
+      box-shadow: none;
+    }
+    img {
+      height: 2rem;
+      width: auto;
+    }
+  }
+}
+
+.layout-main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .layout-topbar {
+    justify-content: flex-start;
+  }
+}
+
+.p-toast-top-right {
+  top: 80px !important;
+}
